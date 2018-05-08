@@ -1,6 +1,5 @@
 package io.mochadwi.mobilenews.data.source.jobs.articles
 
-import io.mochadwi.mobilenews.domain.model.Product
 import io.mochadwi.mobilenews.domain.model.articles.ArticlesModel
 
 /**
