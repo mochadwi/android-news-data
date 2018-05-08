@@ -1,5 +1,7 @@
 package io.mochadwi.mobilenews.data.network
 
+import io.mochadwi.mobilenews.data.BaseResponse
+import io.mochadwi.mobilenews.domain.model.Product
 import io.mochadwi.mobilenews.domain.model.articles.ArticlesModel
 import io.mochadwi.mobilenews.domain.model.news_source.NewsSourceModel
 import io.reactivex.Observable
