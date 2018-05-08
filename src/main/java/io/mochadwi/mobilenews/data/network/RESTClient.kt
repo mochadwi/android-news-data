@@ -2,6 +2,7 @@ package io.mochadwi.mobilenews.data.network
 
 import io.mochadwi.mobilenews.domain.model.articles.ArticlesModel
 import io.mochadwi.mobilenews.domain.model.news_source.NewsSourceModel
+import io.reactivex.Observable
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -16,4 +17,8 @@ interface RESTClient {
 
     @GET("top-headlines")
     fun getArticles(@Query("sources") sources: String): Call<ArticlesModel>
+
+    @GET("top-headlines")
+    fun getTopStory(@Query("country") countryCode: String,
+                    @Query("category") category: String = ""): Observable<ArticlesModel>
 }

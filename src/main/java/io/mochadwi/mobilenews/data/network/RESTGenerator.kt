@@ -8,7 +8,7 @@ import io.mochadwi.mobilenews.domain.model.news_source.SourcesItemSerializer
 import io.realm.RealmObject
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
 
@@ -62,7 +62,7 @@ class RESTGenerator {
             return Retrofit.Builder()
                     .addConverterFactory(ScalarsConverterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create(gson))
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .baseUrl(url)
                     .client(UnsafeOkhttpClient.unsafeOkHttpClient)
                     .build()
